@@ -10,38 +10,31 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+        Managers.Input.KeyAction -= OnKeyboard;//È¤½Ã¶óµµ Áßº¹½ÃÀÛµÇ¸é ÀÏ´Ü ÇÏ³ª ²û.
+        Managers.Input.KeyAction += OnKeyboard;
     }
 
-    //GameObject (Player)
-    // Transform
-    // PlayerController (*)
-
-
-    float _yAngle = 0.0f;
     void Update()
     {
-        _yAngle += Time.deltaTime * 100.0f;
-        //ì ˆëŒ€íšŒì „ê°’
-        //transform.eulerAngles = new Vector3(0.0f, _yAngle, 0.0f);
 
-        // +- delta
-        //transform.Rotate(new Vector3(0.0f, Time.deltaTime * 100.0f, 0.0f));
+        
 
-        //transform.rotation = Quaternion.Euler(new Vector3(0.0f, _yAngle, 0.0f));
+    }
 
+    void OnKeyboard()
+    {
         if (Input.GetKey(KeyCode.W))
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.forward), 0.2f);
             transform.position += Vector3.forward * Time.deltaTime * _speed;
         }
-            
+
         if (Input.GetKey(KeyCode.S))
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.back), 0.2f);
             transform.position += Vector3.back * Time.deltaTime * _speed;
         }
-            
+
         if (Input.GetKey(KeyCode.A))
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.left), 0.2f);
@@ -53,7 +46,6 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.right), 0.2f);
             transform.position += Vector3.right * Time.deltaTime * _speed;
         }
-
 
     }
 }
