@@ -1,20 +1,33 @@
-using System;
+癤퓎sing System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager
 {
-    //전형적인 리스터 패턴
-    public Action KeyAction = null;//delegator(대리자)
+    public Action KeyAction = null;
+    public Action<Define.MouseEvent> MouseAction = null;
 
-    public void onUpdate()//누군가가 직접 불러줘야 하니까 on- 
-        //여기서만 업데이트하니까, 플레이어컨트롤러가 몇개이든 동시에 한번씩만 업데이트체크 될 수 있도록 함.
+    bool _pressed = false;
+
+    public void OnUpdate()
     {
-        if (Input.anyKey == false)
-            return;
-
-        if (KeyAction != null)
+        if (Input.anyKey && KeyAction != null)
             KeyAction.Invoke();
+
+        if (MouseAction != null)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                MouseAction.Invoke(Define.MouseEvent.Press);
+                _pressed = true;
+            }
+            else
+            {
+                if (_pressed)
+                    MouseAction.Invoke(Define.MouseEvent.Click);
+                _pressed = false;
+            }
+        }
     }
 }
