@@ -55,6 +55,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
+	void OnRunEvent(string a)
+	{
+		Debug.Log($"뚜벅 뚜벅~~{a}");
+	}
+
 	void UpdateIdle()
 	{
         // 애니메이션

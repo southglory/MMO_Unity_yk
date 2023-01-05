@@ -14,3 +14,9 @@ Using state pattern with 'eum', and 'switch', not using 'boolean flags'.
 [#11] State Machine
 
 Adding 'WAIT', and 'RUN' states on State Machine with speed condition.
+
+[#12] Animation Event
+
+Adding CubeEventTest.
+
+When character steps the ground, "뚜벅뚜벅" logging is evented.
