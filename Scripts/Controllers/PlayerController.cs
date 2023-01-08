@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 		//Managers.Input.KeyAction += OnKeyboard;
 		Managers.Input.MouseAction -= OnMouseClicked;
 		Managers.Input.MouseAction += OnMouseClicked;
+
+		Managers.Resource.Instantiate("UI/UI_Button");
 	}
 
 
@@ -55,10 +57,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-	void OnRunEvent(string a)
-	{
-		Debug.Log($"뚜벅 뚜벅~~{a}");
-	}
 
 	void UpdateIdle()
 	{
