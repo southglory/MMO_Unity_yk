@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 //using TMPro;
 
-public class UI_Button : MonoBehaviour
+public class UI_Button : UI_Base
 {
-    Dictionary<Type, UnityEngine.Object[]> _objects = new Dictionary<Type, UnityEngine.Object[]>();
-
+    
     enum Buttons
     {
         PointButton
@@ -19,29 +19,39 @@ public class UI_Button : MonoBehaviour
         ScoreText
     }
 
+    enum GameObjects
+    {
+        TestObject,
+    }
+
+    enum Images
+    {
+        ItemIcon,
+    }
+
     private void Start()
     {
         Bind<Button>(typeof(Buttons));
         Bind<Text>(typeof(Texts));
+        Bind<GameObject>(typeof(GameObjects));
+        Bind<Image>(typeof(Images));
+
+        
+
+        GetButton((int)Buttons.PointButton).gameObject.AddUIEvent(OnButtonClicked);
+
+        GameObject go = GetImage((int)Images.ItemIcon).gameObject;
+        AddUIEvent(go, (PointerEventData data) => { go.gameObject.transform.position = data.position; }, Define.UIEvent.Drag);
     }
-    void Bind<T>(Type type) where T : UnityEngine.Object
-    {
-        string[] names = Enum.GetNames(type);
-        UnityEngine.Object[] objects = new UnityEngine.Object[names.Length];
-        _objects.Add(typeof(T), objects);
+    
 
-        for (int i = 0; i < names.Length; i++)
-        {
-            objects[i] = Util.FindChild<T>(gameObject, names[i], true);
-
-        }
-
-    }
 
     int _score = 0;
 
-    public void OnButtonClicked()
+    public void OnButtonClicked(PointerEventData data)
     {
         _score++;
+
+        GetText((int)Texts.ScoreText).text = $"Á¡¼ö : {_score}";
     }
 }
