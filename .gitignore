@@ -1,0 +1,7 @@
+*
+!README
+!README.md.meta
+!.gitignore
+!/Assets/
+!/Packages/
+!/ProjectSettings/
