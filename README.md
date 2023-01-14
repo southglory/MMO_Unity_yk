@@ -24,3 +24,7 @@ When character steps the ground, "뚜벅뚜벅" logging is evented.
 [#13] Buttons, Utils
 
 [#14~#16] UI 자동화, UI 매니저, 인벤토리
+
+[#17] Scene Manager
+
+[#18] Sound Manager
