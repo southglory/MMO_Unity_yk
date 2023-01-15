@@ -7,9 +7,9 @@ public abstract class BaseScene : MonoBehaviour
 {
     public Define.Scene SceneType { get; protected set; } = Define.Scene.Unknown;
 
-    void Start()
+    private void Awake()
     {
-        
+        Init();
     }
 
     protected virtual void Init()

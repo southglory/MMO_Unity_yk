@@ -28,3 +28,5 @@ When character steps the ground, "뚜벅뚜벅" logging is evented.
 [#17] Scene Manager
 
 [#18] Sound Manager
+
+[#19] Pool Manager
