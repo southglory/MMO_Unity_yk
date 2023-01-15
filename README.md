@@ -37,4 +37,7 @@ When character steps the ground, "뚜벅뚜벅" logging is evented.
 testing with Debug.Log(TextAsset.text);<br>
 Serializable, SerializeField<br>
 Solving Error msg"ArgumentException: An item with the same key has already been added. Key: 3"<br>
-Our framework is completed!<br>
+Our platform is completed!<br>
+
+## Mini RPG
+### [#22] Adjusting Medieval Asset, Baking using NavMesh, Setting Buildings to be blocked with Character.
