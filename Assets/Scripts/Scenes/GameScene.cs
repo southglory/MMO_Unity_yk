@@ -4,46 +4,7 @@ using UnityEngine;
 
 public class GameScene : BaseScene
 {
-    class Test
-    {
-        public int Id = 0;
-    }
-
-    // 1. 함수의 상태를 저장/복원 가능!
-        // -> 엄청 오래 걸리는 작업을 잠시 끊거나
-        // -> 원하는 타이밍에 함수를 잠시 Stop/복원하는 경우
-    // 2. return -> 우리가 원하는 타입으로 가능 (class도 가능)
-    class CoroutineTest: IEnumerable
-    {
-        public IEnumerator GetEnumerator()
-        {
-            for (int i = 0; i < 1000000; i++)
-            {
-                if (i%100000 == 0)
-                    yield return null;
-            }
-        }
-        float deltaTime = 0;
-        void ExplodeAfter4Seconds()
-        {
-            deltaTime+= Time.deltaTime;
-            if (deltaTime >= 4)
-            {
-                // 로직
-            }
-        }
-        void GenerateItem()
-        {
-            // 비포
-            // 아이템을 만들어준다
-            // DB저장
-
-
-            // 애프터
-            // 멈춘 상태
-            // 로직
-        }
-    }
+    Coroutine co;
 
     protected override void Init()
     {
@@ -53,13 +14,28 @@ public class GameScene : BaseScene
 
         Managers.UI.ShowSceneUI<UI_Inven>();
 
-        CoroutineTest test = new CoroutineTest();
-        foreach (System.Object t in test)
-        {
-            Test value = (Test)t;
-            Debug.Log(value.Id);
-        }
+        co = StartCoroutine("ExplodeAfterSeconds", 4.0f);
+        StartCoroutine("CoStopExplode", 2.0f);
+    }
 
+    IEnumerator CoStopExplode(float seconds)
+    {
+        Debug.Log("Stop Enter");
+        yield return new WaitForSeconds(seconds);
+        Debug.Log("Stop Excute!");
+        if (co != null)
+        {
+            StopCoroutine(co);
+            co = null;
+        }
+    }
+
+    IEnumerator ExplodeAfterSeconds(float seconds)
+    {
+        Debug.Log("Explode Enter");
+        yield return new WaitForSeconds(seconds);
+        Debug.Log("Explode Excute!");
+        co = null;
     }
 
     public override void Clear()
