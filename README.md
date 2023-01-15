@@ -35,3 +35,4 @@ When character steps the ground, "뚜벅뚜벅" logging is evented.
 
 [#21] DataManager, using Json
 	testing with Debug.Log(TextAsset.text);
+	Serializable, SerializeField
