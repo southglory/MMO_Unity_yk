@@ -32,3 +32,6 @@ When character steps the ground, "뚜벅뚜벅" logging is evented.
 [#19] Pool Manager
 
 [#20] Coroutine C#
+
+[#21] DataManager, using Json
+	testing with Debug.Log(TextAsset.text);
