@@ -8,6 +8,11 @@ public class GameScene : BaseScene
     {
         public int Id = 0;
     }
+
+    // 1. 함수의 상태를 저장/복원 가능!
+        // -> 엄청 오래 걸리는 작업을 잠시 끊거나
+        // -> 원하는 타이밍에 함수를 잠시 Stop/복원하는 경우
+    // 2. return -> 우리가 원하는 타입으로 가능 (class도 가능)
     class CoroutineTest: IEnumerable
     {
         public IEnumerator GetEnumerator()
@@ -17,10 +22,26 @@ public class GameScene : BaseScene
                 if (i%100000 == 0)
                     yield return null;
             }
-            //yield return new Test() { Id = 1 };
-            //yield return new Test() { Id = 2 };
-            //yield return new Test() { Id = 3 };
-            //yield return new Test() { Id = 4 };
+        }
+        float deltaTime = 0;
+        void ExplodeAfter4Seconds()
+        {
+            deltaTime+= Time.deltaTime;
+            if (deltaTime >= 4)
+            {
+                // 로직
+            }
+        }
+        void GenerateItem()
+        {
+            // 비포
+            // 아이템을 만들어준다
+            // DB저장
+
+
+            // 애프터
+            // 멈춘 상태
+            // 로직
         }
     }
 
