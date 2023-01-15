@@ -33,8 +33,8 @@ When character steps the ground, "뚜벅뚜벅" logging is evented.
 
 ## [#20] Coroutine C#
 
-## [#21] DataManager, using Json<br>
+## [#21] DataManager, using Json
 testing with Debug.Log(TextAsset.text);<br>
-Serializable, SerializeField  
-Solving Error msg"ArgumentException: An item with the same key has already been added. Key: 3"  
-		
+Serializable, SerializeField<br>
+Solving Error msg"ArgumentException: An item with the same key has already been added. Key: 3"<br>
+Our platform is completed!<br>
