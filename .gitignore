@@ -6,6 +6,7 @@
 /obj/
 /Temp/
 /UserSettings/
+/Videos/*.mkv
 
 !README.md
 !README.md.meta
