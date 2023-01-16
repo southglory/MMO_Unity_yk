@@ -14,4 +14,4 @@
 !/Packages/*
 !/ProjectSettings/*
 
-.mkv
+/Videos/*.mkv
