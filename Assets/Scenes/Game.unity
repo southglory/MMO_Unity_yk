@@ -12983,6 +12983,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnityChan
       objectReference: {fileID: 0}
+    - target: {fileID: 3012183683821541736, guid: ac0aab6b738f19049844658069fae2c0,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3012183683821541737, guid: ac0aab6b738f19049844658069fae2c0,
         type: 3}
       propertyPath: m_RootOrder
@@ -13871,7 +13876,7 @@ PrefabInstance:
     - target: {fileID: 6379243733555810623, guid: 451a4bf9b6ee35b4bb6908f720da9fe8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.79
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 6379243733555810623, guid: 451a4bf9b6ee35b4bb6908f720da9fe8,
         type: 3}
