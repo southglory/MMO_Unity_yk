@@ -3984,12 +3984,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2455836f34483a42b6613a8fc03a747, type: 3}
+--- !u!1 &693463070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3745626336670860703, guid: 451a4bf9b6ee35b4bb6908f720da9fe8,
+    type: 3}
+  m_PrefabInstance: {fileID: 3745626336649736431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &693463074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3745626336670702079, guid: 451a4bf9b6ee35b4bb6908f720da9fe8,
     type: 3}
   m_PrefabInstance: {fileID: 3745626336649736431}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &693463075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693463070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a329f9a06653d9146932831af469b34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destPos: {x: 0, y: 0, z: 0}
+  _state: 2
+  _lockTarget: {fileID: 0}
+  _scanRange: 10
+  _attackRange: 2
 --- !u!1001 &696970568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13191,6 +13214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnityChan
       objectReference: {fileID: 0}
+    - target: {fileID: 3012183683821541730, guid: ac0aab6b738f19049844658069fae2c0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3012183683821541736, guid: ac0aab6b738f19049844658069fae2c0,
         type: 3}
       propertyPath: m_ApplyRootMotion
@@ -13264,28 +13292,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2015311214}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &2015311223
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015311215}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &2030450240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 409632, guid: 471c1eb32c770a54ea8a1c3ffbda1de6,
@@ -14074,7 +14080,7 @@ PrefabInstance:
     - target: {fileID: 3745626336670702079, guid: 451a4bf9b6ee35b4bb6908f720da9fe8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.94
+      value: -18.13
       objectReference: {fileID: 0}
     - target: {fileID: 3745626336670702079, guid: 451a4bf9b6ee35b4bb6908f720da9fe8,
         type: 3}
@@ -14084,7 +14090,7 @@ PrefabInstance:
     - target: {fileID: 3745626336670702079, guid: 451a4bf9b6ee35b4bb6908f720da9fe8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.19
       objectReference: {fileID: 0}
     - target: {fileID: 3745626336670702079, guid: 451a4bf9b6ee35b4bb6908f720da9fe8,
         type: 3}
