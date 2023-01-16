@@ -44,3 +44,4 @@ Our platform is completed!<br>
 [2] Adding Monster, Adding Stats. <br>
 [3] Adding Cursor texture, Adding Attack motion. <br>
 [4] Adding Sword asset, giving a sword to Character. <br>
+[5] Adding HpBar UI, and linking it with Stat. Adding attacking damage. <br>
