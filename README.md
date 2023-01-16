@@ -41,5 +41,6 @@ Our platform is completed!<br>
 
 ## Mini RPG
 ### [#22] Adjusting Medieval Asset, Baking using NavMesh, Setting Buildings to be blocked with Character.
-Adding Monster, Adding Stats. <br>
-Adding Cursor texture, Adding Attack motion. <br>
+[2] Adding Monster, Adding Stats. <br>
+[3] Adding Cursor texture, Adding Attack motion. <br>
+[4] Adding Sword asset, giving a sword to Character. <br>
