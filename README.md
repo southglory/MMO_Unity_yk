@@ -46,3 +46,4 @@ Our platform is completed!<br>
 [4] Adding Sword asset, giving a sword to Character. <br>
 [5] Adding HpBar UI, and linking it with Stat. Adding attacking damage. <br>
 [6] Adding Monster AI. <br>
+[7] Dividing Managers into "Core" and "Contents". Adding 'IsValid' function at Extension.cs and then use them to check if Character died. <br>
