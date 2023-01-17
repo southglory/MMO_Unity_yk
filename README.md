@@ -48,3 +48,4 @@ Our platform is completed!<br>
 [6] Adding Monster AI. <br>
 [7] Dividing Managers into "Core" and "Contents". Adding 'IsValid' function at Extension.cs and then using them to check if Character died. <br>
 [8] Adding ExpUp, and LevelUp.
+[9] Adding SpawingPool.
