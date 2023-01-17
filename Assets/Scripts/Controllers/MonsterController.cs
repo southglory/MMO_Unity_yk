@@ -24,12 +24,9 @@ public class MonsterController : BaseController
 
     protected override void UpdateIdle()
     {
-        Debug.Log("Monster UpdateIdle");
-
-        // TODO : 매니저가 생기면 옮기자.
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
-            return;
+        GameObject player = Managers.Game.GetPlayer();
+        if (player == null) 
+            return; 
 
         float distance = (player.transform.position - transform.position).magnitude;
         if (distance <= _scanRange)
@@ -90,13 +87,7 @@ public class MonsterController : BaseController
         {
             // 체력
             Stat targetStat = _lockTarget.GetComponent<Stat>();
-            int damage = Mathf.Max(0, _stat.Attack - targetStat.Defense);
-            targetStat.Hp -= damage;
-
-            if (targetStat.Hp <= 0)
-            {
-                Managers.Game.Despawn(targetStat.gameObject);
-            }
+            targetStat.OnAttacked(_stat);
 
             if (targetStat.Hp > 0)
             {

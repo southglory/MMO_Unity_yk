@@ -47,3 +47,4 @@ Our platform is completed!<br>
 [5] Adding HpBar UI, and linking it with Stat. Adding attacking damage. <br>
 [6] Adding Monster AI. <br>
 [7] Dividing Managers into "Core" and "Contents". Adding 'IsValid' function at Extension.cs and then using them to check if Character died. <br>
+[8] Adding ExpUp, and LevelUp.
